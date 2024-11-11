@@ -22,7 +22,12 @@ in {
 
   enterTest = ''
     echo "Running tests"
-    git --version | grep "${pkgs.git.version}"
+    git --version | grep "2.44.0"
+    jq --version | grep "1.7.1"
+    rg --version | grep "14.1.0"
+    xh --version | grep "0.21.0"
+    uv --version | grep "0.4.30"
+    python3 --version | grep "3.12.7"
   '';
 
   pre-commit.hooks.ruff.enable = true;
