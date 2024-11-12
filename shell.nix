@@ -1,8 +1,15 @@
-{ pkgs, lib, config, inputs, ... }:
+{
+  pkgs,
+  lib,
+  config,
+  inputs,
+  ...
+}:
 
 let
   pkgs-unstable = import inputs.nixpkgs-unstable { inherit (pkgs.stdenv) system; };
-in {
+in
+{
   packages = [
     pkgs.git
     pkgs.jq
