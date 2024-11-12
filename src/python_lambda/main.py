@@ -1,7 +1,8 @@
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
-
+from io import BytesIO
+import base64
 
 def plot():
     plt.close("all")
@@ -13,7 +14,11 @@ def plot():
     )
     ts = ts.cumsum()
     ts.plot()
-    plt.show()
+
+
+    buffer = BytesIO()
+    plt.savefig(buffer, format="png")
+    print(base64.b64encode(buffer.getvalue()).decode("utf-8"))
 
 
 if __name__ == "__main__":
