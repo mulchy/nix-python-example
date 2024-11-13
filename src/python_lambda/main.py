@@ -18,7 +18,7 @@ def plot():
 
     buffer = BytesIO()
     plt.savefig(buffer, format="png")
-    print(base64.b64encode(buffer.getvalue()).decode("utf-8"))
+    return base64.b64encode(buffer.getvalue()).decode("utf-8")
 
 
 if __name__ == "__main__":
