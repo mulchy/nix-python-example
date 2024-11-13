@@ -13,14 +13,15 @@ jobs:
       - uses: cachix/cachix-action@v14
         with:
           name: devenv
-      - name: Install devenv.sh
-        run: nix profile install nixpkgs#devenv
+
+      - name: nix develop
+        run: nix develop --no-pure-eval
 
       - name: test shell
         run: devenv test
 
       - name: pytest
-        run: devenv shell uv run pytest
+        run: uv run pytest
 
       # TODO
       # - [ ] Use OIDC to authenticate with AWS
