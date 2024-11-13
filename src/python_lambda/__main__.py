@@ -1,3 +1,3 @@
-from .main import plot
+from python_lambda.plot import render
 
-plot()
+print(render())

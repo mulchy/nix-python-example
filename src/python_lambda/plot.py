@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 from io import BytesIO
 import base64
 
-def plot():
+def render():
     plt.close("all")
     np.random.seed(123456)
     ts = pd.DataFrame(
@@ -22,4 +22,4 @@ def plot():
 
 
 if __name__ == "__main__":
-    plot()
+    render()

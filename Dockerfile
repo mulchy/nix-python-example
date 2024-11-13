@@ -41,4 +41,4 @@ FROM public.ecr.aws/lambda/python:3.12
 COPY --from=build /var/lang/lib/python3.12/site-packages /var/lang/lib/python3.12/site-packages
 
 # "two dot" format
-CMD [ "python_lambda.handler.handler" ]
+CMD [ "python_lambda.lambda.handler" ]
