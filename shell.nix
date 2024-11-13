@@ -30,6 +30,7 @@ in
 
     javascript = {
       enable = true;
+      directory = "infra";
       # 22 not available in cachix/devenv-nixpkgs/rolling yet
       # This builds from source on my computer and takes a while
       # maybe go with 21 for now
