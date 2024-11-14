@@ -27,6 +27,7 @@ jobs:
       # - [ ] Use OIDC to authenticate with AWS
       #       https://docs.github.com/en/actions/security-for-github-actions/security-hardening-your-deployments/configuring-openid-connect-in-amazon-web-services
       # - [ ] Figure out how to choose the environment to deploy to
+      #       https://docs.github.com/en/actions/managing-workflow-runs-and-deployments/managing-deployments/creating-custom-deployment-protection-rules
 
       # - name: "Configure AWS credentials"
       #   uses: "aws-actions/configure-aws-credentials@v4"
